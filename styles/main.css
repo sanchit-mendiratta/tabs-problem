@@ -1,0 +1,196 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*:focus, *:active{ outline: none; }
+
+.hidden {
+  display: none !important;
+}
+
+.src-container{
+  min-height: 100vh;
+  background: #fff;
+}
+.src-header{
+  background: #fff;
+  box-shadow: 0 0 5px #ccc;
+  line-height: 50px;
+  font-size: 22px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.src-panes{ padding: 0 0.5% }
+.src-panes:after{
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.column-pane{
+  padding: 0 1%;
+}
+.left-pane, .right-pane{
+  width: 50%;
+  float:left;
+  height: 500px;
+}
+
+.column-pane .pane-title{
+  margin-bottom: 10px;
+  color: #585858;
+}
+
+.tab-container{
+  /* height: 40px; */
+  width: 100%;
+}
+
+.tab-details{
+  /* background: #f7f7f7; */
+  height: calc(100% - 40px);
+  background: #f7f7f7;
+  box-shadow: 1px 3px 5px #ccc;
+}
+
+.left-pane{ }
+.left-pane > .tab-details{
+  height: 100%;
+}
+
+.right-pane{ }
+
+.src-tab{
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  font-size: 12px;
+  padding: 10px 30px 10px 20px;
+  cursor: default;
+}
+.src-tab.active{
+  background: #f7f7f7;
+  border-top: 2px solid #1597ff;
+  box-shadow: 2px 0px 3px #ccc;
+}
+
+.src-tab .tab-line2{
+  font-size: 11px;
+  color: #aaa;
+}
+
+.src-tab .material-icons{
+  position: absolute;
+  right: 4px;
+  top: 35%;
+  color: #8c8c8b;
+  font-size: 14px;
+}
+
+.fixed-tab{
+  /* float: left; */
+  display: inline-block;
+  vertical-align: top;
+}
+
+.src-tab.add-transaction-tab{
+  font-size: 14px;
+  padding-left: 25px;
+}
+.src-tab.add-transaction-tab .material-icons{
+  color: #1597ff;
+  left: 5px;
+  right: auto;
+}
+
+.dynamic-tabs{
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+}
+
+#add-transaction{
+  padding: 20px;
+}
+#add-transaction > div{
+  margin-bottom: 7px;
+}
+#add-transaction > div:first-of-type{
+  font-size: 14px;
+  padding: 10px 0;
+}
+#add-transaction .input-group{ margin-bottom: 10px; }
+#add-transaction label {
+  font-size: 13px;
+  width: 110px;
+  display: inline-block;
+}
+#add-transaction input{
+  width: 150px;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: #101010;
+}
+#add-transaction .create-tab-button{
+  border: none;
+  color: #f7f7f7;
+  background: #2196F3;
+  padding: 5px 15px;
+  font-size: 15px;
+  margin: 10px 0 10px 188px;
+  cursor: pointer;
+}
+#add-transaction .create-tab-button:hover,
+#add-transaction .create-tab-button:focus,
+#add-transaction .create-tab-button:active{
+  background: #1b7ece;
+}
+
+#more-list{
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 2px 5px #ddd;
+  margin-top: 10px;
+}
+
+.more-list-item{
+  padding: 10px 10px;
+  min-width: 150px;
+}
+.more-list-item .list-item1{ }
+.more-list-item .list-item2{
+  color: #aaa;
+  font-size: 11px;
+}
+
+
+/* Styles for bottom buttons */
+.pane-lower-action button{
+  border: none;
+  color: #f7f7f7;
+  padding: 8px 30px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.left-pane .pane-lower-action button{
+  background: #FF9800;
+}
+.right-pane .pane-lower-action{ text-align: right; }
+.right-pane .pane-lower-action button{
+  background: #8BC34A;
+}
+
+#active-tab-details div p{
+  padding:10%;
+}
+#seemore {
+  transform: translateY(-35%);
+}
+svg {
+  transform: translateY(35%);
+}
